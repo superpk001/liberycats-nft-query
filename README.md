@@ -46,5 +46,5 @@ https://raritysniper.com/libertycats
 
 4. xxxxxxxxxxxx_combine.txt 文件里面有所有的原始猫NFT持有者的ETH地址&持有原始猫的数量
 
-### 最新数据存放路径
-src/main/resources/202408/20240820165128_combine.txt
+### 为方便大家阅读
+我把最后结果的文档复制到 结果.txt
