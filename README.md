@@ -1,6 +1,25 @@
 # libertycats-nft-query
+### What is Liberty Cats
+Liberty Cats live life in their own favorite ways.
+
+### How to join us
+Social media
+Website：To be published (expected in August/September 2024)
+
+X
+https://x.com/LibertyCatNFT
+
+Ins
+https://www.instagram.com/liberty.cats/
+
+Discord
+https://discord.gg/wPqMzFEv
+
+Rarity ranking
+https://raritysniper.com/libertycats
+
 ### 前言
-这个是因为群里一直有人说 原始猫 难统计，因为我就像做这个查询功能出来给大家参考，毕竟我也是原始猫持有者。
+群里一直有人说 **原始猫** 难统计，因此我就像做这个查询功能出来给大家参考，毕竟我也是原始猫持有者。
 
 能力有限，代码写得可能有点臃肿。代码我都加了很多注释，方便阅读。
 
