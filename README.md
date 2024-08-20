@@ -19,7 +19,7 @@ Rarity ranking
 https://raritysniper.com/libertycats
 
 ### 前言
-群里一直有人说 **原始猫** 难统计，因此我就像做这个查询功能出来给大家参考，毕竟我也是原始猫持有者。
+群里一直有人说 **原始猫** 难统计，因此我就像做这个查询功能出来给大家参考，毕竟我也是原始猫持有者。（**一建三连，建设建设**）
 
 能力有限，代码写得可能有点臃肿，**如果发现有bug，麻烦告知我一声**。代码我都加了很多注释，方便阅读。
 
@@ -45,3 +45,6 @@ https://raritysniper.com/libertycats
 3. xxxxxxxxxxxx_original.txt 文件里面有所有的原始猫NFT持有者的ETH地址，有重复数据代表这个持有者有多个原始猫NFT
 
 4. xxxxxxxxxxxx_combine.txt 文件里面有所有的原始猫NFT持有者的ETH地址&持有原始猫的数量
+
+### 最新数据存放路径
+src/main/resources/202408/20240820165128_combine.txt
