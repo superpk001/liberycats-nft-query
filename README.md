@@ -41,7 +41,7 @@ https://raritysniper.com/libertycats
 
 如果最后一次交易的发送者地址不是赚哥的地址，则这只猫猫NFT不是原始猫。
 
-因为**2024/08/24**是白皮书发布之日，因此白皮书诞生之日在赚哥账号转出的都不作为原始猫。
+因为**2024/08/24**是白皮书发布之日，因此白皮书诞生日之后在赚哥账号转出的都不作为原始猫。
 
 ### 如何运行代码
 1. 需要到 com.libertycats.common.Constants 修改你的 apiKey，apikye 需要到 https://console.chainbase.com/login 注册获取
