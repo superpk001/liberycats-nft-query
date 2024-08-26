@@ -1,5 +1,7 @@
 package com.libertycats.util;
 
+import com.libertycats.common.Constants;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,5 +26,14 @@ public class MyDateUtil {
      */
     public static String getNowDateStr() {
         return new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+    }
+
+    /**
+     * 获取白皮书之日
+     * @return
+     * @throws Exception
+     */
+    public static Date getWhitePaperDate() throws Exception {
+        return new SimpleDateFormat("yyyy-MM-dd").parse(Constants.whitePaperDate);
     }
 }

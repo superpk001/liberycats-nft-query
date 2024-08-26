@@ -16,6 +16,9 @@ public class Constants {
     // api-key
     public static final String apiKey = "xxxxxxxxxxxxxxxx";
 
+    // White Paper Date(白皮书之日)
+    public static final String whitePaperDate = "2024-08-24";
+
     // 参考 https://docs.chainbase.com/platform/features/api/web3-api
     // Polygon 对应 137
     public static final String chainId = "137";

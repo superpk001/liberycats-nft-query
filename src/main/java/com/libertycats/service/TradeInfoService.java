@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.libertycats.common.Constants;
 import com.libertycats.entity.TradeInfo;
 import com.libertycats.entity.TradeItem;
+import com.libertycats.util.MyDateUtil;
 import com.libertycats.util.MyFileUtil;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
@@ -173,7 +174,10 @@ public class TradeInfoService {
             if (maxTradeItem.isPresent() && maxTradeItem.get() != null) {
                 // 由于赚哥有几个账号，from address 只要匹配其中一个就可以
                 if (Arrays.stream(Constants.zhuanEthAddress).anyMatch(maxTradeItem.get().getFrom_address()::equals)) {
-                    addressList.add(maxTradeItem.get().getTo_address());
+                    // 白皮书诞生日之后在赚哥账号转出的都不作为原始猫
+                    if(MyDateUtil.getWhitePaperDate().getTime() >= maxTradeItem.get().getBlock_timestamp().getTime()) {
+                        addressList.add(maxTradeItem.get().getTo_address());
+                    }
                 }
             }
 

@@ -49,13 +49,13 @@ public class NeverTradeOwner {
         List<String> neverTradeOwnerAddressList = TradeInfoService.getNeverTradeOwnerAddress();
 
         // 保存未经处理的原始猫的持有者
-        MyFileUtil.saveNeverTradeAddress(neverTradeOwnerAddressList, "original");
+        MyFileUtil.saveNeverTradeAddress(neverTradeOwnerAddressList, "原始数据");
 
         // 整理 list 数据准备输出到文本
         List<String> entryList = TradeInfoService.tradeDataSorting(neverTradeOwnerAddressList);
 
         // 保存处理过的原始猫的持有者
-        MyFileUtil.saveNeverTradeAddress(entryList, "combine");
+        MyFileUtil.saveNeverTradeAddress(entryList, "整合数据");
 
     }
 
