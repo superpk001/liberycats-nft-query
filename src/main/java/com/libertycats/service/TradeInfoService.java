@@ -94,6 +94,7 @@ public class TradeInfoService {
                 if (jsonInfo.contains("Too many requests")) {
                     System.out.println(new Date() + " == delete file == " + file.getAbsolutePath());
                     FileUtils.delete(file);
+                    continue;
                 }
 
                 // 第二轮判断
