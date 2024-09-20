@@ -7,7 +7,8 @@ This project is **unofficial**（这个项目是**非官方**的）
 
 ### How to join us
 Social media
-Website：To be published (expected in August/September 2024)
+Website
+https://www.libertycatsnfts.com/
 
 white-paper
 https://libertycatsnfts.gitbook.io/white-paper
