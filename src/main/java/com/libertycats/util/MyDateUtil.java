@@ -14,6 +14,7 @@ public class MyDateUtil {
 
     /**
      * 获取年月的字符格式
+     *
      * @return
      */
     public static String getYearMothStr() {
@@ -22,6 +23,7 @@ public class MyDateUtil {
 
     /**
      * 获取年月日时分秒的字符格式
+     *
      * @return
      */
     public static String getNowDateStr() {
@@ -30,10 +32,28 @@ public class MyDateUtil {
 
     /**
      * 获取白皮书之日
+     *
      * @return
      * @throws Exception
      */
     public static Date getWhitePaperDate() throws Exception {
         return new SimpleDateFormat("yyyy-MM-dd").parse(Constants.whitePaperDate);
+    }
+
+    /**
+     * * 获取指定的时间戳对应的时间
+     *
+     * @param timestamp 时间戳
+     * @return String 年-月-日 时:分:秒
+     */
+    public static Date timestampToDate(String timestamp) {
+        Date date = null;
+        try {
+            long temp = Long.valueOf(timestamp.trim());
+            date = new Date(temp * 1000L);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return date;
     }
 }

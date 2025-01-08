@@ -8,11 +8,11 @@ import java.util.List;
  * @author jb51.net (i@jb51.net)
  * @website http://tools.jb51.net/code/json2javabean
  */
-public class TradeInfo {
+public class ChainbaseTradeInfo {
 
     private int code;
     private String message;
-    private List<TradeItem> data;
+    private List<ChainbaseTradeItem> data;
     private int count;
     private int next_page;
 
@@ -38,10 +38,10 @@ public class TradeInfo {
         return message;
     }
 
-    public void setData(List<TradeItem> data) {
+    public void setData(List<ChainbaseTradeItem> data) {
         this.data = data;
     }
-    public List<TradeItem> getData() {
+    public List<ChainbaseTradeItem> getData() {
         return data;
     }
 

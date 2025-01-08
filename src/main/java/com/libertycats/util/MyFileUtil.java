@@ -19,13 +19,21 @@ public class MyFileUtil {
      * @param catId
      * @return
      */
-    public static String formatName(String tradeSavePath, Integer catId) {
+    public static String formatName(String tradeSavePath, String platformType, Integer catId) throws Exception {
 
         // 每 1000 条分配到一个目录
         int folderNumber = catId / 1000;
 
+        if("OKX".equalsIgnoreCase(platformType)) {
+            platformType = "OKX";
+        } else if("CHAINBASE".equalsIgnoreCase(platformType)) {
+            platformType = "CHAINBASE";
+        } else {
+            throw new Exception("Error platformType");
+        }
+
         // 返回格式 /etc/libertycat/202408/10/CAT10000.json
-        return tradeSavePath + MyDateUtil.getYearMothStr() + "/" + folderNumber + "/CAT" + String.format("%05d", catId) + ".json";
+        return tradeSavePath + MyDateUtil.getYearMothStr() + "/" + folderNumber + "/" + platformType + String.format("%05d", catId) + ".json";
     }
 
     /**
@@ -41,9 +49,21 @@ public class MyFileUtil {
 
         String ownerAddressListStr = String.join("\r\n", ownerAddressList);
 
+        String bugisDiamondHandStr = "";
+        // 加上是否买入算砖石手
+        if("Y".equalsIgnoreCase(Constants.bugisDiamondHand)) {
+            bugisDiamondHandStr = "买入也算砖石手";
+        } else if("N".equalsIgnoreCase(Constants.bugisDiamondHand)) {
+            bugisDiamondHandStr = "买入不是砖石手";
+        }
+
         // 把原始数据保存起来
         FileUtils.write(
-                new File(Constants.tradeSavePath + MyDateUtil.getYearMothStr() + "/" +  MyDateUtil.getNowDateStr() + "_" + type.toLowerCase() + ".txt"),
+                new File(Constants.tradeSavePath +
+                        MyDateUtil.getYearMothStr() + "/" +
+                        MyDateUtil.getNowDateStr() + "_" +
+                        bugisDiamondHandStr + "_" +
+                        type.toLowerCase() + ".txt"),
                 ownerAddressListStr, "UTF-8", false);
 
     }
@@ -54,10 +74,10 @@ public class MyFileUtil {
      * @param tradeJsonInfo
      * @param catId
      */
-    public static void saveCatTradeInfo(String tradeJsonInfo, Integer catId) throws Exception {
+    public static void saveCatTradeInfo(String tradeJsonInfo, String platformType, Integer catId) throws Exception {
 
         // CAT00001.txt
-        File file = new File(formatName(Constants.tradeSavePath, catId));
+        File file = new File(formatName(Constants.tradeSavePath, platformType, catId));
 
         // 覆盖模式
         FileUtils.write(file, tradeJsonInfo, "UTF-8", false);

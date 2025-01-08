@@ -6,7 +6,7 @@ package com.libertycats.entity;
  * @version 1.0
  * 2024/8/16 18:16
  **/
-public class NeverOwner {
+public class ChainbaseNeverOwner {
 
     private String ownerId;
     private Integer catsNumber;

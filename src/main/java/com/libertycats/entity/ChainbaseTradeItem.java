@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * @author jb51.net (i@jb51.net)
  * @website http://tools.jb51.net/code/json2javabean
  */
-public class TradeItem {
+public class ChainbaseTradeItem {
 
     @JsonProperty("block_number")
     private int block_number;

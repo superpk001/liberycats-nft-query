@@ -2,7 +2,6 @@ package com.libertycats;
 
 import com.libertycats.service.TradeInfoService;
 import com.libertycats.util.MyFileUtil;
-
 import java.util.*;
 
 /**
@@ -20,23 +19,25 @@ public class NeverTradeOwner {
     public static void main(String[] args) throws Exception {
 
         // 这两个方法需要配合使用，可能要循环两个回合
-        getData();
+        downloadData();
 
         // 先执行完 getData, 再执行这里 saveData
         saveData();
+
+
     }
 
     /**
      * 获取猫猫交易数据
      * @throws Exception
      */
-    private static void getData() throws Exception {
+    private static void downloadData() throws Exception {
 
         // 1.获取猫猫交易数据
-        TradeInfoService.getAllTradeInfo();
+        TradeInfoService.downloadAllTradeInfo();
 
         // 2.删除错误数据
-        TradeInfoService.delErrorTradeInfo();
+        TradeInfoService.deleteErrorFile();
     }
 
     /**
